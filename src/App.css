@@ -1,0 +1,36 @@
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  @media print {
+    .hide-on-capture {
+      display: none !important;
+    }
+  }
+
+  img,
+  button,
+  div:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@layer utilities {
+  .font-primary {
+    font-family: "PT Serif", serif;
+  }
+
+  .font-secondary {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+@supports (height: 100dvh) {
+  .min-h-d-screen {
+    min-height: 100dvh;
+  }
+}
