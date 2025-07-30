@@ -31,9 +31,10 @@ const AboutUsPage = () => {
     return (
         <div className="h-[100vh] bg-black text-white">
             <Navbar />
-            <div className="min-h-screen flex">
-                <div className="w-1/2 bg-[#678E07] flex items-center justify-center ">
-                    <div className="w-[434px] h-[448px] bg-white rounded-lg flex items-center justify-center">
+            <div className="min-h-screen flex flex-col md:flex-row">
+
+                <div className="w-full md:w-1/2 bg-[#678E07] flex items-center justify-center p-4">
+                    <div className="w-full max-w-md aspect-[434/448] bg-white mt-20 md:mt-0 rounded-lg flex items-center justify-center">
                         <img
                             src={Banner1}
                             alt="Wind"
@@ -42,13 +43,13 @@ const AboutUsPage = () => {
                     </div>
                 </div>
 
-                <div className="w-1/2 bg-black flex items-center justify-center p-20">
-                    <div className="text-white space-y-8 max-w-lg">
-                        <h1 className="text-4xl  leading-tight font-primary">
+                <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-6 md:p-20">
+                    <div className="text-white space-y-6 max-w-lg">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-primary">
                             Africa's Leading Sustainable Finance Advisory Firm
                         </h1>
 
-                        <p className="text-lg text-gray-300 leading-relaxed font-secondary text-sm">
+                        <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-secondary">
                             With Over 50 Years Of Combined Expertise, Barton Heyman's Team Structures Transformative Deals In Green Finance, Carbon Markets, And Energy Transition Across Africa And Beyond.
                         </p>
 
@@ -59,6 +60,7 @@ const AboutUsPage = () => {
                     </div>
                 </div>
             </div>
+
             <div className="bg-white pb-20 pt-8 px-8">
                 <div className="max-w-5xl mx-auto">
                     <h1 className="text-3xl text-gray-800 mb-5 font-primary">Welcome To Barton Heyman</h1>
