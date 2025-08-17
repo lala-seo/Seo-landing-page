@@ -340,17 +340,17 @@ export default function Home() {
       </div>
 
       <div className="bg-[#191919] mt-[64px] lg:pt-[120px] md:pt-4 pt-5">
-        <p className="text-[#E0E0E0] font-secondary font-[400] text-[15px] text-center mb-[16px] ">
+        {/* <p className="text-[#E0E0E0] font-secondary font-[400] text-[15px] text-center mb-[16px] ">
           {" "}
           TESTIMONIAL
         </p>
         <p className="text-white font-primary font-[400] lg:text-[40px] text-center lg:mb-[48px] text-[28px] tracking-[-0.02em]">
           Reviews About Barton Heyman
-        </p>
-        <div className="lg:mb-[80px] border border-b overflow-hidden">
+        </p> */}
+        {/* <div className="lg:mb-[80px] border border-b overflow-hidden">
           <TestimonialCarousel />
-        </div>
-        <hr className="border border-[#282828]" />
+        </div> */}
+        {/* <hr className="border border-[#282828]" /> */}
         <div className="lg:pt-[64px] max-w-[1416px] mx-auto pb-[64px] lg:mb-[64px] px-4 lg:px-0">
           <p className="font-[400] text-[15px] font-secondary text-[#E0E0E0] mb-[12px]">
             LATEST ARTICLES

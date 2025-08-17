@@ -45,10 +45,10 @@ const navigate = useNavigate()
                                 <h3 className="text-gray-900 font-semibold mb-[16px]  text-sm font-secondary">Socials</h3>
                                 <ul className="space-y-[8px]  text-sm font-secondary">
                                     <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Facebook</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Youtube</a></li>
+                                    <li><a href="https://www.youtube.com/@bartonheymanltd" className="text-gray-600 hover:text-gray-900 transition-colors">Youtube</a></li>
                                     <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Instagram</a></li>
                                     <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Linkedin</a></li>
+                                    <li><a href="https://www.linkedin.com/company/barton-heyman-ltd/" className="text-gray-600 hover:text-gray-900 transition-colors">Linkedin</a></li>
                                     <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Podcast</a></li>
                                 </ul>
                             </div>

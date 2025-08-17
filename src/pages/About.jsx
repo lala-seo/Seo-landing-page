@@ -273,7 +273,7 @@ const AboutUsPage = () => {
                 <img
                   src={member.image}
                   alt={member.role}
-                  className="w-full max-w-[320px] h-auto md:w-[320px] md:h-[320px] object-cover rounded-lg"
+                  className="w-full max-w-[320px] h-auto md:w-[320px] md:h-[320px] object-contain rounded-lg"
                 />
               </figure>
             </div>

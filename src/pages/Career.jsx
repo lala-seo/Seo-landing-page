@@ -117,7 +117,7 @@ export default function CareerPage() {
       </div>
 
       <div className="bg-[#191919] lg:pt-[120px] md:pt-4 pt-5">
-        <p className="text-[#E0E0E0] font-secondary font-[400] text-[15px] text-center mb-[16px] ">
+        {/* <p className="text-[#E0E0E0] font-secondary font-[400] text-[15px] text-center mb-[16px] ">
           {" "}
           TESTIMONIAL
         </p>
@@ -127,7 +127,7 @@ export default function CareerPage() {
         <div className="lg:mb-[80px] border border-b overflow-hidden">
           <TestimonialCarousel />
         </div>
-        <hr className="border border-[#282828]" />
+        <hr className="border border-[#282828]" /> */}
         <div className="lg:pt-[64px] max-w-[1416px] mx-auto pb-[64px] lg:mb-[64px] px-4">
           <p className="font-[400] text-[15px] mt-10 font-secondary text-[#E0E0E0] mb-[12px]">
             LATEST ARTICLES
