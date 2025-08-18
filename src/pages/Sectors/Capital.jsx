@@ -9,8 +9,10 @@ import Footer from "../../components/common/Footer";
 import Seo from "../../components/common/Seo";
 import { SEO_CONFIG } from "../../config/seoConfig";
 import { Arrowright } from "../../assets/icons";
+import { useNavigate } from "react-router-dom";
 
 const Capital = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-[100vh] bg-black text-white">
       <Seo {...SEO_CONFIG.CAPITAL_MARKETS} ogImage="/og-about.jpg" />
@@ -32,6 +34,13 @@ const Capital = () => {
           <button
             className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors  text-white rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center justify-center gap-[16px]"
             style={{ width: "fit-content" }}
+            onClick={() =>
+              navigate("/contact", {
+                state: {
+                  advisoryNeed: "Discuss Capital Markets solutions with us",
+                },
+              })
+            }
           >
             Discuss Capital Markets solutions with us
             <Arrowright />

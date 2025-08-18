@@ -11,25 +11,27 @@ const testimonials = [
     title: "Simply The Best",
     quote:
       "Anytime I reach out to Barton Heyman’s team with a question, I'll get an email back within 15 minutes max, letting me know they're on it. That kind of personal service is rare in any industry.",
-    name: "Tony O. Elumelu",
-    role: "Chairperson Of The United Bank For Africa",
-    image: tony,
+    name: "John Doe",
+    role: "Chairperson",
+    // image: tony,
   },
   {
     title: "Simply The Best",
     quote:
       "Anytime I reach out to Barton Heyman’s team with a question, I'll get an email back within 15 minutes max, letting me know they're on it. That kind of personal service is rare in any industry.",
-    name: "Tony O. Elumelu",
-    role: "Chairperson Of The United Bank For Africa",
-    image: tony,
+    name: "John Doe",
+
+    role: "Chairperson",
+    // image: tony,
   },
   {
     title: "Simply The Best",
     quote:
       "Anytime I reach out to Barton Heyman’s team with a question, I'll get an email back within 15 minutes max, letting me know they're on it. That kind of personal service is rare in any industry.",
-    name: "Tony O. Elumelu",
-    role: "Chairperson Of The United Bank For Africa",
-    image: tony,
+    name: "John Doe",
+
+    role: "Chairperson",
+    // image: tony,
   },
 ];
 

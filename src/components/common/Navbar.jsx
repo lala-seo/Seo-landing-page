@@ -32,7 +32,7 @@ export default function Navbar({status= false}) {
 
   return (
     <div
-      className={`fixed font-secondary top-0 left-0 w-full px-4 sm:px-6 lg:px-12 flex justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-black py-4" : "bg-transparent py-6"
+      className={`fixed font-secondary top-0 left-0 w-full px-4 sm:px-6 lg:px-12 flex justify-between items-center z-50 transition-all duration-300 ${isScrolled ? "bg-black py-4" : "bg-black py-6"
         }`}
     >
       <Link to="/" className="z-50">

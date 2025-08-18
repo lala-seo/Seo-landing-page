@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import Logo from "../../assets/images/logo2.png";
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
-
+const navigate = useNavigate()
     return (
         <div>
             <div className="bg-white py-16 pb-10 px-8">
                 <div className="max-w-[1416px] mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12">
                         <div className="lg:col-span-1">
-                            <div className="mb-6">
+                            <div className="mb-6 cursor-pointer" onClick={()=> navigate("/")}>
                                 <img
                                     src={Logo}
                                     alt="Barton Heyman Logo"
@@ -24,20 +25,20 @@ export default function Footer() {
                             <div>
                                 <h3 className="text-gray-900 font-semibold text-sm font-secondary mb-[16px]">Quick Link</h3>
                                 <ul className="space-y-[8px]  text-sm font-secondary">
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">About Us</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Sectors</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Insights</a></li>
+                                    <li><a href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</a></li>
+                                    <li><a href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About Us</a></li>
+                                    <li><a href="/power" className="text-gray-600 hover:text-gray-900 transition-colors">Sectors</a></li>
+                                    <li><a href="/insights" className="text-gray-600 hover:text-gray-900 transition-colors">Insights</a></li>
                                     <li><a href="/career" className="text-gray-600 hover:text-gray-900 transition-colors">Careers</a></li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-gray-900 font-semibold  text-sm font-secondary mb-[16px]">Help Center</h3>
                                 <ul className="space-y-[8px]  text-sm font-secondary">
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Contact Us</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Conditions</a></li>
+                                    <li><a href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact Us</a></li>
+                                    {/* <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Terms & Conditions</a></li>
                                     <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Support Policy</a></li>
-                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy</a></li>
+                                    <li><a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">Privacy</a></li> */}
                                 </ul>
                             </div>
                             <div>
@@ -55,7 +56,7 @@ export default function Footer() {
                     </div>
                     <div className="mt-12 pt-8 border-t border-gray-300">
                         <p className="text-gray-600  text-sm font-secondary">
-                            ©2021 Bartonheyman Copyright All Right Reserved.
+                            ©2021 Barton Heyman Copyright All Right Reserved.
                         </p>
                     </div>
                 </div>

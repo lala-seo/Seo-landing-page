@@ -6,10 +6,11 @@ import Capital2 from "../../assets/images/capital3.png";
 import Capital3 from "../../assets/images/capital2.png";
 import Newsletter from "../../components/common/Newsletter";
 import Footer from "../../components/common/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Arrowright } from "../../assets/icons";
 
 const Technology = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-[100vh] bg-black text-white">
       <Navbar />
@@ -17,20 +18,28 @@ const Technology = () => {
       <div className="min-h-[80vh] flex items-center justify-center bg-black p-6">
         <div className="text-white space-y-6 max-w-3xl text-center  flex items-center justify-center flex-col">
           <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-primary tracking-[-0.02em]  ">
-     Financial Technology Advisory | ESG Data Integration & Market Infrastructure Systems 
+            Financial Technology Advisory | ESG Data Integration & Market
+            Infrastructure Systems
           </h1>
 
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-secondary">
-  Barton Heyman implements transformative technology solutions for capital markets, climate finance tracking, and ESG data integration across Africa's financial ecosystem.
-
+            Barton Heyman implements transformative technology solutions for
+            capital markets, climate finance tracking, and ESG data integration
+            across Africa's financial ecosystem.
           </p>
           <button
             className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors  text-white rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center justify-center gap-[16px]"
             style={{ width: "fit-content" }}
+            onClick={() =>
+              navigate("/contact", {
+                state: {
+                  advisoryNeed: "Discuss Your Technology Project",
+                },
+              })
+            }
           >
             Discuss Your Technology Project
-                        <Arrowright />
-          
+            <Arrowright />
           </button>
         </div>
       </div>
@@ -45,8 +54,12 @@ const Technology = () => {
 
         <div className="max-w-[1024px] mx-auto">
           <h1 className="text-2xl text-gray-800 mb-5 font-secondary py-10 lg:font-[400] lg:text-[20px] leading-[140%] ">
-           Our Technology practice bridges the gap between financial innovation and practical implementation, delivering market infrastructure systems, ESG data platforms, and digital transformation initiatives that modernize Africa's financial landscape. We specialize in solutions that enhance transparency, streamline compliance, and unlock new capital flows.
-
+            Our Technology practice bridges the gap between financial innovation
+            and practical implementation, delivering market infrastructure
+            systems, ESG data platforms, and digital transformation initiatives
+            that modernize Africa's financial landscape. We specialize in
+            solutions that enhance transparency, streamline compliance, and
+            unlock new capital flows.
           </h1>
           <div className="pb-10">
             <div className=" grid lg:grid-cols-2 gap-16 items-start py-10">
@@ -56,24 +69,24 @@ const Technology = () => {
               <div className="max-w-2xl">
                 <ul className="text-[#282828] leading-relaxed font-secondary text-sm list-disc list-outside space-y-1 ">
                   <li>
-                    <b>Market Infrastructure Systems</b> – Trading, clearing, settlement, and surveillance platforms
-
+                    <b>Market Infrastructure Systems</b> – Trading, clearing,
+                    settlement, and surveillance platforms
                   </li>
                   <li>
-                    <b>ESG Data Integration & Analytics</b> – Environmental, social, and governance data management
-
+                    <b>ESG Data Integration & Analytics</b> – Environmental,
+                    social, and governance data management
                   </li>
                   <li>
-                    <b>Climate Risk Assessment Tools</b> –Quantifying and managing climate exposure
-
+                    <b>Climate Risk Assessment Tools</b> –Quantifying and
+                    managing climate exposure
                   </li>
                   <li>
-                    <b>Digital Asset Infrastructure</b> –Tokenization and blockchain applications for sustainable finance
-
+                    <b>Digital Asset Infrastructure</b> –Tokenization and
+                    blockchain applications for sustainable finance
                   </li>
                   <li>
-                    <b>Regulatory Technology (RegTech)</b> –Compliance automation and reporting solutions
-
+                    <b>Regulatory Technology (RegTech)</b> –Compliance
+                    automation and reporting solutions
                   </li>
                 </ul>
               </div>
@@ -88,12 +101,12 @@ const Technology = () => {
               <div className="max-w-2xl">
                 <ul className="text-[#282828] leading-relaxed font-secondary text-sm list-disc list-outside space-y-1 ">
                   <li>
-                    <b>Technology Strategy & Architecture</b> – AAligning technology investments with business objectives
-
+                    <b>Technology Strategy & Architecture</b> – AAligning
+                    technology investments with business objectives
                   </li>
                   <li>
-                    <b>Vendor Selection & Implementation</b> –Ensuring seamless operation within existing environments
-
+                    <b>Vendor Selection & Implementation</b> –Ensuring seamless
+                    operation within existing environments
                   </li>
                   <li>
                     <b>ESG & Climate Data Solutions</b> – Designing data
@@ -104,8 +117,8 @@ const Technology = () => {
                     operation within existing environments
                   </li>
                   <li>
-                    <b>Capacity Building & Knowledge Transfer</b> –Developing sustainable in-house capabilities
-
+                    <b>Capacity Building & Knowledge Transfer</b> –Developing
+                    sustainable in-house capabilities
                   </li>
                 </ul>
               </div>
@@ -125,8 +138,10 @@ const Technology = () => {
                 Multi-Asset Exchange Technology Platform
               </h2>
               <p className="text-gray-600 leading-relaxed font-secondary text-sm list-disc list-outside space-y-1 pl-5 lg:pl-0">
-                Creating an Innovative Trading Environment with FIX <Link className="font-bold text-black" to="Learn more here">Learn more here</Link>
-               
+                Creating an Innovative Trading Environment with FIX{" "}
+                <Link className="font-bold text-black" to="Learn more here">
+                  Learn more here
+                </Link>
               </p>
             </div>
           </div>

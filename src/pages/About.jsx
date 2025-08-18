@@ -10,6 +10,8 @@ import Footer from "../components/common/Footer";
 import { Arrowright, LinkedinIcon, XIcon } from "../assets/icons";
 import Seo from "../components/common/Seo";
 import { SEO_CONFIG } from "../config/seoConfig";
+import { useNavigate } from "react-router-dom";
+
 
 const AboutUsPage = () => {
   const competencies = [
@@ -34,7 +36,7 @@ const AboutUsPage = () => {
         "Building Governance Frameworks And Technology Infrastructure For Efficient Capital Markets",
     },
   ];
-  
+
   const teamMembers = [
     {
       name: "Olumide Lala",
@@ -61,14 +63,15 @@ const AboutUsPage = () => {
       image: "",
     },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="h-[100vh] bg-black text-white">
       <Seo {...SEO_CONFIG.ABOUT} ogImage="/og-about.jpg" />
       <Navbar />
-      <div className="min-h-[80vh] flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 bg-[#678E07] flex items-center justify-center p-4">
-          <div className="w-full max-w-md aspect-[434/448] bg-white mt-20 md:mt-0 rounded-lg flex items-center justify-center">
+      <div className="min-h-[80vh] flex flex-col md:flex-row mt-[90px]">
+        <div className="w-full md:w-1/2 bg-[#678E07] flex items-center justify-center p-4  ">
+          <div className="w-full max-w-md aspect-[434/448] bg-white mt-20 md:mt-0 rounded-lg flex items-center justify-center ">
             <img
               src={Banner1}
               alt="Wind"
@@ -77,7 +80,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-6 md:p-20">
+        <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-6 md:p-20  ">
           <div className="text-white space-y-6 max-w-lg">
             <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-primary">
               Africa's Leading Sustainable Finance Advisory Firm
@@ -89,7 +92,14 @@ const AboutUsPage = () => {
               carbon markets, and energy transition across Africa and beyond
             </p>
 
-            <button className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px] ">
+            <button
+              className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px] "
+              onClick={() =>
+                navigate("/contact", {
+                  state: { advisoryNeed: "Request Strategy Session" },
+                })
+              }
+            >
               Request Strategy Session
               <Arrowright />
             </button>
@@ -195,7 +205,16 @@ const AboutUsPage = () => {
                 investment partners.
               </p>
 
-              <button className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px]">
+              <button
+                className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px]"
+                onClick={() =>
+                  navigate("/contact", {
+                    state: {
+                      advisoryNeed: "Request Strategy Session",
+                    },
+                  })
+                }
+              >
                 Request Strategy Session
                 <Arrowright />
               </button>

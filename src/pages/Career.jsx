@@ -112,7 +112,7 @@ export default function CareerPage() {
             Job Openings (0)
           </div>
           <p className="font-primary text-[32px] font-[400] text-black my-[24px]  tracking-[-0.02em]">No Current Openings</p>
-          <p className="max-w-[433px] font-secondary font-[400] text-[15px] leading-[164%]" >If you would like to join our team, send your resume to:  <b>Careers@bartonheyman.com</b> </p>
+          <p className="max-w-[433px] font-secondary font-[400] text-[15px] leading-[164%]" >If you would like to join our team, send your resume to:  <b>careers@bartonheyman.com</b> </p>
         </div>
       </div>
 

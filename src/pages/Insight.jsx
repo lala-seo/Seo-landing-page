@@ -102,8 +102,8 @@ export default function Insights() {
       <Seo {...SEO_CONFIG.INSIGHTS} ogImage="/og-about.jpg" />
 
       <Navbar />
-      <div className="min-h-[80vh] flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 bg-[#3091CA] flex items-center justify-center p-4">
+      <div className="min-h-[80vh] flex flex-col md:flex-row mt-[90px]">
+        <div className="w-full md:w-1/2 bg-[#3091CA] flex items-center justify-center p-4 ">
           <div className="w-full max-w-md aspect-[434/448] bg-white mt-20 md:mt-0 rounded-lg flex items-center justify-center">
             <img
               src={Banner1}
@@ -113,7 +113,7 @@ export default function Insights() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-6 md:p-20">
+        <div className="w-full md:w-1/2 bg-black flex items-center justify-center p-6 md:p-20  ">
           <div className="text-white space-y-6 max-w-lg">
             <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-primary">
               Financial Insights | Climate Finance, Carbon Markets & ESG
@@ -129,6 +129,11 @@ export default function Insights() {
             <button
               className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors  text-white rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center justify-center gap-[16px]"
               style={{ width: "fit-content" }}
+              onClick={() => {
+                document
+                  .getElementById("newsletter-section")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               Sign up to Newsletter
               <Arrowright />
@@ -137,7 +142,7 @@ export default function Insights() {
         </div>
       </div>
 
-      <div className="bg-white pb-20 pt-8   mx-auto">
+      <div className="bg-white pb-20 pt-8 lg:px-[48px] px-4 ">
         <div className="max-w-[1416px] mx-auto px-4 lg:px-0">
           <div className="">
             <h1 className="text-3xl text-gray-800 mb-5 font-primary   tracking-[-0.02em]">
@@ -171,7 +176,7 @@ export default function Insights() {
       </div>
       <hr className=" mx-auto" style={{ border: "0.5px solid #E1E1E1" }} />
       {/* <div className=" "> */}
-      <div className="mt-[48px]  mb-[64px] max-w-[1345px] mx-auto px-4 lg:px-0">
+      <div className="mt-[48px]  mb-[64px]  mx-auto px-4 lg:px-[48px]">
         <div
           className="bg-[#678E07] px-[16px] py-[10px] rounded-tr-[20px] rounded-br-[20px] font-[600] text-[12px] font-secondary text-white"
           style={{ width: "fit-content" }}
@@ -261,7 +266,7 @@ export default function Insights() {
         className=" max-w-[1345px] mx-auto"
         style={{ border: "0.5px solid #E1E1E1" }}
       />
-      <div className="mt-[48px] mb-[120px]  max-w-[1345px] mx-auto px-4 lg:px-0">
+      <div className="mt-[48px] mb-[120px]   mx-auto px-4 lg:px-[48px]">
         <div
           className="bg-[#3091CA] px-[16px] py-[10px] rounded-tr-[20px] rounded-br-[20px] font-[600] text-[12px] font-secondary text-white"
           style={{ width: "fit-content" }}
@@ -346,7 +351,10 @@ export default function Insights() {
           </button>
         </div>
       </div>
-      <Newsletter />
+      <div id="newsletter-section">
+        <Newsletter />
+      </div>
+
       <Footer />
     </div>
   );

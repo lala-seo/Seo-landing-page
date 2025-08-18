@@ -23,7 +23,9 @@ import ArticleCard from "../components/common/ArticleCard";
 import { Helmet } from "react-helmet-async";
 import Seo from "../components/common/Seo";
 import { SEO_CONFIG } from "../config/seoConfig";
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   const featureData = [
     {
       title: "Transaction Excellence",
@@ -101,7 +103,7 @@ export default function Home() {
 
   return (
     <div>
-          <Seo {...SEO_CONFIG.HOME} />
+      <Seo {...SEO_CONFIG.HOME} />
       <div className="min-h-[80vh] bg-black text-white">
         <Navbar />
         <div className="pt-[120px] px-4 md:px-8 lg:px-0 flex flex-col-reverse lg:flex-row justify-between items-center max-w-[1116px] mx-auto pb-[80px]">
@@ -114,7 +116,14 @@ export default function Home() {
               accelerating the energy transition across power, renewables, and
               climate finance markets.
             </p>
-            <button className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px]">
+            <button
+              className="px-[20px] py-[18px] border border-[#678E07] hover:bg-[#2E2E2E] hover:cursor-pointer transition-colors rounded-[20px] bg-[#1F1F1F] font-[600] text-[14px] font-secondary flex items-center gap-[16px]"
+              onClick={() =>
+                navigate("/contact", {
+                  state: { advisoryNeed: "Schedule Strategic Consultation" },
+                })
+              }
+            >
               Schedule Strategic Consultation <Arrowright />
             </button>
           </div>

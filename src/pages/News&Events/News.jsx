@@ -42,7 +42,7 @@ export default function News() {
 
   return (
     <div>
-      <div className="bg-white text-white relative   ">
+      <div className="bg-white text-white relative lg:px-4  ">
         <Navbar status={true} />
         <div className=" lg:pt-[110px] pt-25 ">
           <div className="max-w-[1416px]  mx-auto">
