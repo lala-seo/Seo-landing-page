@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/prerender.mjs && node scripts/sitemap.mjs",
     "build:no-prerender": "vite build && node scripts/sitemap.mjs",
-    "deploy": "npx vercel build --yes && npx vercel deploy --prebuilt --prod",
+    "deploy": "npx vercel build --yes --prod && npx vercel deploy --prebuilt --prod",
     "lint": "eslint .",
     "preview": "vite preview"
   },
