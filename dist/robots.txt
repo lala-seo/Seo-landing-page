@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap (update domain if different)
+Sitemap: https://www.bartonheyman.com/sitemap.xml
