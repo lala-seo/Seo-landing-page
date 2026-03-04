@@ -61,7 +61,7 @@ export const SEO_CONFIG = {
   CAPITAL_MARKETS: {
     title: "Capital Markets Advisory | Green Bond Structuring & Sustainable Exchange Development",
     description: "Barton Heyman designs next-generation capital market infrastructure, ESG frameworks, and green bond platforms that drive sustainable finance across African markets.",
-    canonicalUrl: `${BASE_URL}/sectors/capital`
+    canonicalUrl: `${BASE_URL}/capital`
   },
   TECHNOLOGY: {
     title: "Financial Technology Advisory | ESG Data Integration & Market Infrastructure Systems",

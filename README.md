@@ -1,12 +1,22 @@
-# React + Vite
+# Barton Heyman – SEO Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite marketing site with prerendering for crawlers and search engines.
 
-Currently, two official plugins are available:
+## Build & deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **`npm run build`** – Builds the app, then prerenders key routes (so crawlers get full HTML) and generates `sitemap.xml`. Output is in `dist/`.
+- **`npm run build:no-prerender`** – Build only + sitemap (no Puppeteer). Use if prerender fails in CI (e.g. set `SKIP_PRERENDER=1` and run the normal build, or use this script).
+- **Vercel** – Deploy the `dist` folder. Static files (e.g. prerendered `/about/index.html`) are served before the SPA rewrite, so search engines receive the prerendered HTML.
 
-## Expanding the ESLint configuration
+## SEO (crawlers & blank page fix)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Prerender** – Key routes (`/`, `/about`, `/power`, etc.) are rendered to static HTML at build time so “View source” and crawlers see content, not an empty `<div id="root">`.
+- **robots.txt** – In `public/robots.txt`: allows all crawlers and points to `Sitemap: https://www.bartonheyman.com/sitemap.xml`.
+- **sitemap.xml** – Generated into `dist/` at build; submit this URL in Google Search Console.
+- If the build environment can’t run Puppeteer (e.g. some CI), set **`SKIP_PRERENDER=1`** before `npm run build`; sitemap and robots still apply, but prerendered HTML won’t be generated for that build.
+
+## Development
+
+- `npm run dev` – Start dev server
+- `npm run preview` – Serve production build locally
+- `npm run lint` – Run ESLint
